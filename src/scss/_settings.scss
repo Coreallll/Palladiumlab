@@ -82,21 +82,96 @@ html {
     font: $font-title-mini;
     border: 1px solid $color-border-btn;
     color: $color-mine-shaft;
+    transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
     &:hover {
       border-color: $color-mine-shaft;
-      background-color: rgba(0, 0, 0, 0.1);
+      transition: border-color 0.3s ease-in-out;
+    }
+
+    &:active {
+      border-color: $color-active;
+      color: $color-active;
+      transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
     }
   }
 
   .btn-arrow {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     align-self: center;
+    padding-left: 5px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     border: 1px solid $color-services-border;
-    background: url('../img/arrow.svg') no-repeat center center;
     background-position-x: 60%;
+
+    &:hover {
+      border-top-color: transparent; // Show borders
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      transition:
+      border-top-color 1.1s ease, // Stagger border appearances
+      border-right-color 0.5s ease 0s,
+      border-bottom-color 1s ease 0s,
+      border-left-color 1.2s ease 0s;
+      transform: rotate(border(45deg));
+
+      .arrow-icon {
+        fill: $color-mine-shaft;
+        transition: fill 0.5s ease-in-out;
+      }
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      left: -1px;
+      box-sizing: inherit;
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+    }
+
+    &::before {
+      border: 1px solid transparent;
+    }
+
+    &:hover::before {
+      border-top-color: $color-mine-shaft; // Show borders
+      border-right-color: $color-mine-shaft;
+      border-bottom-color: $color-mine-shaft;
+      transform: rotate(45deg); // We're animating border-color again
+      transition:
+      border-top-color 0.35s linear, // Stagger border appearances
+      border-right-color 0.35s linear 0.30s,
+      border-bottom-color 0.35s linear 0.40s;
+    }
+
+    &::after {
+      border: 0 solid $color-mine-shaft; // Makes border thinner at the edges? I forgot what I was doing
+      // transform: rotate(90deg);
+    }
+
+    &:hover::after {
+      border-top: 1px solid $color-mine-shaft ;// Shows border
+      border-left-width: 1px; // Solid edges, invisible borders
+      border-right-width: 1px; // Solid edges, invisible borders
+      transform: rotate(270deg); // Rotate around circle
+      transition: transform 0.9s linear 0s,
+      border-left-width 0s linear 0.55s;// Solid edge post-rotation
+    }
+
+    
+
+    
   }
 
   .btn-streak {
@@ -174,6 +249,14 @@ html {
     -webkit-text-stroke: 1.75px $color-mine-shaft;
     color: $color-white;
   }
+  
+  .btn-file {
+    &:hover {
+      .btn-file--icon {
+        fill: $color-hover;
+      }
+    }
+  }
 
   .pic {
     display: block;
@@ -208,6 +291,16 @@ html {
       font-family: 'Montserrat';
       font-weight: 600;
       font-size: 12px;
+    }
+
+    .btn-arrow {
+      padding-left: 3px;
+      
+      &::before,
+      &::after {
+        width: 30px;
+        height: 30px;
+      }
     }
 
   }

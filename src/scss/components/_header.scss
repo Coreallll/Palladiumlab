@@ -23,6 +23,7 @@
 
     &__logo {
         margin: 0 auto;
+        cursor:pointer;
     }
 
     &__phone {
@@ -60,21 +61,6 @@
         opacity: 0.7;
         transition: opacity 0.3s ease-in-out;
 
-        &:hover {
-            opacity: 1;
-
-            &::after {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: -34px;
-                width: 100%;
-                height: 1px;
-                background-color: $color-mine-shaft;
-                z-index: 2;
-            }
-        }
-
         &--reverse {
             color: $color-white;
         }
@@ -82,12 +68,14 @@
     }
 }
 
-.marker {
+.marker-icon {
     fill: $color-mine-shaft;
+    transition: fill 0.3s ease-in-out;
 
     &--reverse {
         fill: $color-white;
     }
+
 }
 
 .logo {
@@ -98,7 +86,7 @@
     }
 }
 
-.phone {
+.phone-icon {
     fill: $color-mine-shaft;
 
     &--reverse {
@@ -106,11 +94,71 @@
     }
 }
 
+.header-info {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    right: 10%;
+    left: 10%;
+    padding: 20px 0;
+    background-color: $color-white;
+    z-index: 100;
+    animation: backUp 0.5s ease-in-out;
+    animation-fill-mode:forwards;
+
+
+    &__adress {
+        font: $font-title-mini;
+        color: $color-mine-shaft;
+
+        &--bold {
+            color: $color-hover;
+        }
+    }
+
+    &__left {
+        padding-right: 20px;
+        border-right: 1px solid $color-header-border;
+    }
+
+    &__right {
+        padding-left: 20px;
+    }
+}
+
+.header-callback {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 10%;
+    left: 10%;
+    padding: 20px 0;
+    background-color: $color-white;
+    z-index: 100;
+    animation: backUp 0.5s ease-in-out;
+    animation-fill-mode:forwards;
+
+    &__number {
+        margin-right: 20px;
+        font-family: 'Gilroy';
+        font-size: 30px;
+        line-height: 36px;
+        color: $color-mine-shaft;
+    }
+
+}
+
 @media (max-width:1024px) {
+
     .header {
 
         &__marker {
-            
+            padding: 25px;
+        }
+
+        &__phone {
+            padding: 25px;
         }
     }
 
@@ -138,6 +186,29 @@
         width: 25px;
         height: 26px;
     }
+
+    .header-info {
+
+        padding: 13px 0;
+        
+        &__left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__right {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .header-callback {
+        padding: 0;
+
+        &__number {
+            font-size: 24px;
+        }
+    }
 }
 
 @media (max-width:768px) {
@@ -157,13 +228,37 @@
         display: none;
     }
 
-    .marker {
+    .marker-icon {
         width: 10px;
         height: 13px;
     }
 
-    .phone {
+    .phone-icon {
         width: 14px;
         height: 13px;
+    }
+
+    .header-info {
+        padding: 0;
+        right: 15%;
+        left: 15%;
+
+        &__adress {
+            font-family: 'Montserrat';
+            font-size: 10px;
+        }
+    }
+
+    .header-callback {
+        right: 15%;
+        left: 15%;
+        
+        &__number {
+            font-size: 16px;
+        }
+    }
+
+    .btn-recall {
+        padding: 7px 30px;
     }
   }

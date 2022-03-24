@@ -1,7 +1,6 @@
 // базовые подключения
 @import "vars";
 @import "mixins";
-// @import "fonts";
 @import "settings";
 
 // большие компоненты
@@ -13,5 +12,7 @@
 
 
 //маленькие компоненты
-// @import "./components/nav";
-// @import "./components/messengers";
+@import "./components/header_hover";
+@import "./components/examples_hover";
+@import "./components/contacts_hover";
+
