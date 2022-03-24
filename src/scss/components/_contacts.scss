@@ -1,0 +1,240 @@
+.contacts {
+  margin-bottom: $section-margin;
+
+  &__content.grid {
+    grid-template-rows: none;
+  }
+
+  &__title {
+    margin-bottom: $title-margin;
+    position: relative;
+    font: $font-section-title;
+  }
+}
+
+.contacts-block {
+
+  &__item {
+    margin-bottom: $title-margin;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    font: $font-title-mini;
+    color: $color-mine-shaft;
+
+    &--social {
+      margin-bottom: 15px;
+    }
+
+    &--form {
+      margin-bottom: 19px;
+    }
+  }
+
+  &__descr {
+    font: $font-contacts-description;
+    color: $color-mine-shaft;
+  }
+
+  &--left {
+    grid-column: 1/4;
+  }
+
+  &--center {
+    grid-column: 5/8;
+  }
+
+  &--right {
+    grid-column: 9/13;
+  }
+}
+
+.contacts-social {
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+
+}
+
+.media {
+  fill: $color-mine-shaft;
+  border-radius: 2px;
+}
+
+.form {
+  &__description {
+    margin-bottom: 34px;
+    font: $font-form-title;
+    color: $color-form;
+  }
+
+  &__description-link {
+    font: $font-form-title;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: $color-mine-shaft;
+    text-underline-offset: 4px;
+    color: $color-mine-shaft;
+  }
+}
+
+.form-questions {
+
+  &__label {
+    position: relative;
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  &__title {
+    font: $font-form-title;
+    color: $color-mine-shaft;
+  }
+
+}
+
+.input-questions {
+  padding-right: 10px;
+  height: 28px;
+  border-bottom: 1px solid $color-header-border;
+
+  &::placeholder {
+    font: $font-contacts-description;
+    color: $color-form;
+  }
+}
+
+.btn-file {
+  position: absolute;
+  right: 0;
+  bottom: 7px;
+  width: 18px;
+  height: 18px;
+
+  &--icon {
+    fill: $color-form;
+  }
+}
+
+.btn-form {
+  padding: 9px 49px;
+}
+
+.btn-streak--contacts {
+  left: -70px;
+}
+
+@media (max-width:1024px) {
+  .contacts {
+    margin-bottom: $section-margin-1024;
+
+    &__title {
+      margin-bottom: $title-margin-1024;
+      font-size: 30px;
+    }
+  }
+
+  .contacts-block__descr {
+    font-size: 10px;
+  }
+
+  .btn-form {
+    padding: 9px 35px;
+  }
+}
+
+@media (max-width:768px) {
+
+  .contacts {
+    margin-bottom: $section-margin-768;
+
+    &__title {
+      margin-bottom: 20px;
+      font-family: "Montserrat";
+      font-weight: 500;
+      font-size: 26px;
+    }
+  }
+
+  .btn-streak--title {
+    left: -38px;
+    width: 25px;
+  }
+
+  .contacts-block {
+
+    &__title {
+      margin-bottom: 5px;
+      font-family: 'Montserrat';
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    &__descr {
+      font-size: 8px;
+      line-height: 12px;
+    }
+
+    &__item {
+      margin-bottom: 30px;
+    }
+  }
+
+  .media {
+    width: 20px;
+    height: 20px;
+  }
+
+  .form-questions {
+    
+    &__title {
+      font-size: 8px;
+    }
+
+    &__label {
+      margin-bottom: 15px;
+    }
+  }
+
+  .btn-file {
+    bottom: 3px;
+
+    &--icon {
+      width: 14px;
+      height: 14px;
+    }
+
+  }
+
+  .input-questions {
+    padding-right: 18px;
+    height: 24px;
+
+    &::placeholder {
+      font-size: 8px;
+    }
+  }
+
+  .form__description {
+    font-size: 7px;
+  }
+
+  .form__description-link {
+    font-size: 7px;
+    text-underline-offset: 3px;
+  }
+
+  .btn-form {
+    padding: 9px 20px;
+  }
+}

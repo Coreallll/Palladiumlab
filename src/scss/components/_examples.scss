@@ -1,0 +1,148 @@
+.examples {
+  margin-bottom: $section-margin;
+
+  &__content {
+    margin-bottom: 64px;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: $title-margin;
+    font: $font-section-title;
+    color: $color-mine-shaft;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    padding-right: 80px;
+  }
+}
+
+.examples-block {
+  position: relative;
+  background-color: $color-mine-shaft;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  &__title {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    font: $font-services;
+    color: $color-white;
+    z-index: 1;
+  }
+
+  &:first-child {
+    grid-column: 1/9;
+  }
+
+  &:nth-child(2) {
+    grid-column: 9/13;
+    grid-row: 1/3;
+  }
+
+  &:nth-child(3) {
+    grid-column: 1/5;
+    grid-row: 2/3;
+  }
+
+  &:nth-child(4) {
+    grid-column: 5/9;
+    grid-row: 2/3;
+  }
+
+  &:nth-child(5) {
+    grid-column: 1/5;
+    grid-row: 3/5;
+  }
+
+  &:nth-child(6) {
+    grid-column: 5/13;
+    grid-row: 4/5;
+  }
+
+  &:nth-child(7) {
+    grid-column: 5/9;
+    grid-row: 3/4;
+  }
+
+  &:nth-child(8) {
+    grid-column: 9/13;
+    grid-row: 3/4;
+  }
+}
+
+.text-stroke--title {
+  -webkit-text-stroke: 0.8px $color-mine-shaft;
+}
+
+.btn-streak--title {
+  left: -80px;
+  width: 40px;
+}
+
+@media (max-width:1024px) {
+
+  .examples {
+    margin-bottom: $section-margin-1024;
+
+    &__title {
+      margin-bottom: $title-margin-1024;
+      font-size: 30px;
+    }
+
+    &__button {
+      padding-right: 30px;
+    }
+  }
+
+  .btn-streak--title {
+    left: -70px;
+  }
+
+}
+
+@media (max-width:768px) {
+
+  .examples {
+    margin-bottom: $section-margin-768;
+
+    &__content {
+      margin-bottom: 35px;
+    }
+
+    &__title {
+      margin-bottom: $title-margin-768;
+      font-family: 'Montserrat';
+      font-weight: 500;
+      font-size: 26px;
+    }
+
+    &__button {
+      padding-right: 15px;
+    }
+    
+  }
+
+  .btn-streak--title {
+    left: -38px;
+    width: 25px;
+  }
+  
+  .examples-block__title {
+    top: 20px;
+    left: 20px;
+    font-size: 18px;
+  }
+
+}

@@ -1,0 +1,44 @@
+.footer {
+
+  &__content {
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1.5px solid $color-mine-shaft;
+  }
+}
+
+.copyright {
+  font: $font-contacts-description;
+  color: $color-mine-shaft;
+}
+
+.copyright-strong {
+  font: $font-title-mini;
+  color: $color-mine-shaft;
+}
+
+@media (max-width:1024px) {
+  .copyright {
+    font-size: 10px;
+  }
+
+  .copyright-strong {
+    font-size: 12px;
+  }
+}
+
+@media (max-width:768px) {
+
+  .footer__content {
+    padding: 15px 0;
+  }
+
+  .copyright {
+    font-size: 8px;
+  }
+
+  .copyright-strong {
+    font-size: 10px;
+  }
+}
