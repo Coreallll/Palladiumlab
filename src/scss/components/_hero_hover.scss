@@ -20,20 +20,24 @@
 
     &:hover {
         color: $color-hover;
+        transition: color 0.3s ease-in-out;
     }
 
     &:active {
         color: $color-active-link;
+        transition: color 0.3s ease-in-out;
     }
 }
 
 .hero__services-link {
-    
+
     &:hover {
         color: $color-hover;
+        transition: color 0.3s ease-in-out;
     }
 
     &:active {
         color: $color-active-link;
+        transition: color 0.3s ease-in-out;
     }
 }
