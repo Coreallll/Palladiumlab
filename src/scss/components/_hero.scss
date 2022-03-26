@@ -9,13 +9,21 @@
 
     &--services {
       position: absolute;
-      display: none;
+      display: flex;
+      justify-content: center;
       top: 150px;
       right: 0;
       left: 0;
       color: $color-white;
+      opacity: 0;
       z-index: 1;
+      transition: opacity 0.3s ease-in-out;
     }
+  }
+
+  .title-active {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
   }
 
 
@@ -27,7 +35,6 @@
     &--reverse {
       -webkit-text-stroke: 1.75px $color-white;
       color: transparent;
-
     }
   }
 
@@ -35,6 +42,10 @@
     position: relative;
     z-index: 1;
 
+    &--reverse {
+      border-color: $color-services-border;
+      color: $color-white;
+    }
   }
 
   &__services-list {
@@ -56,192 +67,147 @@
     height: 100%;
     min-height: 85px;
     max-width: 359px;
+    border-right: 1px solid $color-services-border;
 
-    &:not(:last-child) {
-      border-right: 1px solid $color-services-border;
-    }
 
     &:first-child {
-      &:hover {
+      border-left: 1px solid $color-services-border;
+    }
 
-        .title-repair {
-          display: flex;
-          justify-content: center;
+    .is-active {
+      display: flex;
+    }
+
+    .is-disabled {
+      opacity: 0;
+      animation-duration: 1s;
+    }
+
+    .back-services-link.is-active {
+      display: flex;
+      -webkit-animation-name: backColUp;
+              animation-name: backColUp;
+      -webkit-animation-duration: 0.4s;
+              animation-duration: 0.4s;
+    }
+  
+    .back-services-link.is-disabled {
+        display: flex;
+        -webkit-animation-name: dropdownClose;
+                animation-name: dropdownClose;
+        -webkit-animation-duration: 0.4s;
+                animation-duration: 0.4s;
+    }
+  
+    @keyframes dropdownOpen {
+        from {
+          opacity: 0;
         }
-
-        .back-services-link {
-          display: flex;
-          background-color: #EB5757;
-          animation: backCol 0.5s ease-in-out;
+        to {
+          opacity: 1;
         }
-
-        .back-hero {
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          animation: backHero 0.3s ease-in-out;
-
-          &--repair {
-            background: url('../img/services-repair.webp') no-repeat center center;
-            background-size: cover;
-          }
+      }
+      
+      
+      @keyframes dropdownClose {
+        from {
+          opacity: 1;
         }
-
-        .hero__services-link--repair {
-          display: block;
+        to {
+          opacity: 0;
         }
+    }
 
-        .btn-arrow--repair {
-          display: block;
-          z-index: 1;
-        }
+    .title-repair {
+      display: flex;
+      justify-content: center;
+    }
 
-        .hero__services-description--repair {
-          display: block;
-          z-index: 1;
-        }
+    .back-services-link {
+      display: none;
 
+      &--repair {
+        background-color: #EB5757;
+        animation: backCol 0.5s ease-in-out;
+      }
 
+      &--jobs {
+        background-color: #219653;
+        animation: backCol 0.5s ease-in-out;
+      }
+
+      &--design {
+        background-color: #2F80ED;
+        animation: backCol 0.5s ease-in-out;
+      }
+
+      &--room {
+        background-color: #9B51E0;
+        animation: backCol 0.5s ease-in-out;
       }
     }
 
-    &:nth-child(2) {
-      &:hover {
+    .back-hero {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
 
-        .title-jobs {
-          display: flex;
-          justify-content: center;
-        }
+      &--repair {
+        background: url('../img/services-repair.webp') no-repeat center center;
+        background-size: cover;
+      }
 
-        .back-services-link {
-          display: flex;
-          background-color: #219653;
-          animation: backCol 0.5s ease-in-out;
-        }
+      &--jobs {
+        background: url('../img/services-jobs.webp') no-repeat center center;
+        background-size: cover;
+      }
 
-        .back-hero {
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          animation: backHero 0.3s ease-in-out;
+      &--design {
+        background: url('../img/services-design.webp') no-repeat center center;
+        background-size: cover;
+      }
 
-          &--jobs {
-            background: url('../img/services-jobs.webp') no-repeat center center;
-            background-size: cover;
-          }
-        }
+      &--room {
+        background: url('../img/services-room.webp') no-repeat center center;
+        background-size: cover;
+      }
 
-        .hero__services-link--jobs {
-          display: block;
-        }
-
-        .btn-arrow--jobs {
-          display: block;
-          z-index: 1;
-        }
-
-        .hero__services-description--jobs {
-          display: block;
-          z-index: 1;
-        }
+      &--active {
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
       }
     }
 
-    &:nth-child(3) {
-      &:hover {
 
-        .title-design {
-          display: flex;
-          justify-content: center;
-        }
+    .btn-arrow{
 
-        .back-services-link {
-          display: flex;
-          background-color: #2F80ED;
-          animation: backCol 0.5s ease-in-out;
-        }
+      &--repair {
+        display: block;
+        z-index: 1;
+      }
 
-        .back-hero {
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          animation: backHero 0.3s ease-in-out;
+      &--jobs {
+        display: block;
+        z-index: 1;
+      }
 
-          &--design {
-            background: url('../img/services-design.webp') no-repeat center center;
-            background-size: cover;
-          }
-        }
+      &--design {
+        display: block;
+        z-index: 1;
+      }
 
-        .hero__services-link--design {
-          display: block;
-        }
-
-        .btn-arrow--design {
-          display: block;
-          z-index: 1;
-        }
-
-        .hero__services-description--design {
-          display: block;
-          z-index: 1;
-        }
+      &--room {
+        display: block;
+        z-index: 1;
       }
     }
 
-    &:last-child {
-      &:hover {
 
-        .title-room {
-          display: flex;
-          justify-content: center;
-        }
-
-        .back-services-link {
-          display: flex;
-          background-color: #9B51E0;
-          animation: backCol 0.5s ease-in-out;
-
-        }
-
-        .back-hero {
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          animation: backHero 0.3s ease-in-out;
-          
-
-          &--room {
-            background: url('../img/services-room.webp') no-repeat center center;
-            background-size: cover;
-          }
-        }
-
-        .hero__services-link--room {
-          display: block;
-        }
-
-        .btn-arrow--room {
-          display: block;
-          z-index: 1;
-        }
-
-        .hero__services-description--room {
-          display: block;
-          z-index: 1;
-        }
-      }
-    }
-
-    @keyframes backCol {
+    @keyframes backColUp {
       0% {
         height: 40%;
       }
@@ -250,26 +216,47 @@
         height: 100%;
       }
     }
-
-    @keyframes backHero {
-      0% {
-        opacity: 0.6;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
   }
 
-  &__services-link {
+  &__services-btn {
     font: $font-services;
     color: $color-white;
   }
 
   &__services-description {
     display: none;
+    text-align: center;
+    margin-bottom: 33px;
+    font: $font-services-description;
+    color: $color-white;
+
+    &--repair {
+      display: block;
+      z-index: 1;
+    }
+
+    &--jobs {
+      display: block;
+      z-index: 1;
+    }
+
+    &--design {
+      display: block;
+      z-index: 1;
+    }
+
+    &--room {
+      display: block;
+      z-index: 1;
+    }
+
   }
+}
+
+.hero__services-link {
+  margin-bottom: 8px;
+  font: $font-services;
+  color: $color-white;
 }
 
 .back-hero {
@@ -299,24 +286,25 @@
   background-image: url('../img/hero-bottom.webp');
   background-size: cover;
   transition: background-image 0.5s ease-in-out;
+
+  &--disable {
+    background: transparent;
+  }
 }
 
-.hero__title--off {
-  opacity: 0;
-}
+.btn-streak {
+  position: absolute;
+  top: 18px;
+  left: -12px;
+  width: 24px;
+  height: 1px;
+  background-color: $color-mine-shaft;
+  transition: background-color 0.3s ease-in-out;
 
-.hero-bottom--off {
-  background-image: none;
-  transition: background-image 0.5s ease-in-out;
-}
-
-.link-active {
-  border-color: rgba(255, 255, 255, 0.3);
-  color: $color-white;
-}
-
-.btn-streak--reverse {
-  background-color: $color-white;
+  &--reverse {
+    background-color: $color-white;
+    transition: background-color 0.3s ease-in-out;
+  }
 }
 
 .back-services-link {
@@ -327,28 +315,14 @@
   justify-content: flex-end;
   align-items: center;
   padding: 40px;
-  width: 25vw;
+  max-width: 360px;
   height: 100%;
-}
-
-.hero__services-description {
-  display: none;
-  text-align: center;
-  margin-bottom: 33px;
-  font: $font-services-description;
-  color: $color-white;
 }
 
 .btn-arrow--services {
   display: none;
   transform: rotate(-90deg);
   z-index: 1;
-}
-
-.hero__services-link--off {
-  display: none;
-  text-align: center;
-  margin-bottom: 16px;
 }
 
 .arrow-icon {
@@ -368,7 +342,7 @@
       font-size: 58px;
     }
 
-    &__services-link {
+    &__services-btn {
       font-size: 18px;
     }
 
@@ -419,7 +393,7 @@
       padding: 20px;
     }
 
-    &__services-link {
+    &__services-btn {
       margin-bottom: 5px;
       font-family: 'Montserrat';
       font-weight: 600;

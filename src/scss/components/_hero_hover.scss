@@ -1,0 +1,17 @@
+.hero__callback-link--reverse {
+
+    &:hover {
+        border-color: $color-white;
+        transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+
+    &:active {
+        border-color: $color-active;
+        transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+        .btn-streak--reverse {
+            background-color: $color-active;
+            transition: background-color 0.3s ease-in-out;
+        }
+    }
+}

@@ -6,6 +6,10 @@
     z-index: 100;
     border-bottom: 1px solid $color-header-border;
 
+    &--reverse {
+        border-color: $color-services-border;
+    }
+
     &__container {
         padding: 0;
         position: relative;
@@ -19,11 +23,24 @@
         padding: 34px;
         height: 100%;
         border-right: 1px solid $color-header-border;
+
+        &--reverse {
+            border-color: $color-services-border;
+        }
     }
 
     &__logo {
         margin: 0 auto;
         cursor:pointer;
+        transition: fill 0.2s ease-in-out;
+        
+        .logo {
+            fill: $color-mine-shaft;
+    
+            &--reverse {
+                fill: $color-white;
+            }
+        }
     }
 
     &__phone {
@@ -32,6 +49,10 @@
         padding: 33px;
         height: 100%;
         border-left: 1px solid $color-header-border;
+
+        &--reverse {
+            border-color: $color-services-border;
+        }
     }
     
 }
@@ -78,14 +99,6 @@
 
 }
 
-.logo {
-    fill: $color-mine-shaft;
-
-    &--reverse {
-        fill: $color-white;
-    }
-}
-
 .phone-icon {
     fill: $color-mine-shaft;
 
@@ -103,9 +116,6 @@
     padding: 20px 0;
     background-color: $color-white;
     z-index: 100;
-    animation: backUp 0.5s ease-in-out;
-    animation-fill-mode:forwards;
-
 
     &__adress {
         font: $font-title-mini;
@@ -136,8 +146,6 @@
     padding: 20px 0;
     background-color: $color-white;
     z-index: 100;
-    animation: backUp 0.5s ease-in-out;
-    animation-fill-mode:forwards;
 
     &__number {
         margin-right: 20px;

@@ -56,12 +56,12 @@ const webpImages = () => {
 };
 
 const htmlInclude = () => {
-  return src(['./src/*.html'])
+  return src(['src/*.html'])
     .pipe(fileInclude({
       prefix: '@',
       basepath: '@file'
     }))
-    .pipe(dest('./dist'))
+    .pipe(dest('dist'))
     .pipe(browserSync.stream());
 }
 
@@ -88,7 +88,7 @@ const styles = () => {
 
 const scripts = () => {
   return src([
-    'src/js/components/**/*.js',
+    'src/js/**/*.js',
     'src/js/main.js'
     ])
   .pipe(babel({

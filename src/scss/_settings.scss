@@ -86,7 +86,7 @@ html {
 
     &:hover {
       border-color: $color-mine-shaft;
-      transition: border-color 0.3s ease-in-out;
+      transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
     }
 
     &:active {
@@ -168,19 +168,6 @@ html {
       transition: transform 0.9s linear 0s,
       border-left-width 0s linear 0.55s;// Solid edge post-rotation
     }
-
-    
-
-    
-  }
-
-  .btn-streak {
-    position: absolute;
-    top: 18px;
-    left: -12px;
-    width: 24px;
-    height: 1px;
-    background-color: $color-mine-shaft;
   }
 
   .input-reset {

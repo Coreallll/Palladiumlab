@@ -2,11 +2,6 @@
 
   &__logo {
 
-    .logo {
-      fill: $color-mine-shaft;
-      transition: fill 0.2s ease-in-out;
-    }
-
     &:hover .logo {
       fill: $color-hover;
       transition: fill 0.2s ease-in-out;
@@ -28,7 +23,7 @@
         content: '';
         position: absolute;
         left: 0;
-        bottom: -34px;
+        bottom: -35px;
         width: 100%;
         height: 1px;
         background-color: $color-mine-shaft;
@@ -38,23 +33,29 @@
   }
 }
 
+.nav__link--reverse {
+
+  &:hover {
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+}
+
 .header__marker:hover .marker-icon {
   fill: $color-hover;
   transition: fill 0.3s ease-in-out;
 }
 
-.header__marker:hover + .header-info {
-  animation: dropDown 0.5s ease-in-out;
-}
+// .header__phone:hover .phone-icon {
+//   fill: $color-hover;
+//   transition: fill 0.3s ease-in-out;
+// }
 
-.header__phone:hover .phone-icon {
-  fill: $color-hover;
-  transition: fill 0.3s ease-in-out;
-}
-
-.header__phone:hover + .header-callback {
-  animation: dropDown 0.5s ease-in-out;
-}
+// .header__phone:hover + .header-callback {
+//   animation: dropDown 0.5s ease-in-out;
+// }
 
 @keyframes dropDown {
   from {
