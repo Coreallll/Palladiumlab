@@ -140,33 +140,38 @@ btnRoom.addEventListener('click', function () {
 
 
 var tlMarker = gsap.timeline({
-    paused: true,
-    reversed:false
-  });
-  
-  markerBorder.addEventListener('click', () => {
-    tlMarker.play()
-    markerBorder.addEventListener('click', (reversed) => {
-      tlMarker.reversed(!tlMarker.reversed())
-    })
-  });
-  
-  tlMarker.from(".header-info", {opacity: 0,y: -150,duration: 0.35})
-  
-  
-  var tlPhone = gsap.timeline({
-    paused: true,
-    reversed:false
-  });
-  
-  phoneBorder.addEventListener('click', () => {
-    tlPhone.play()
-    phoneBorder.addEventListener('click', (reversed) => {
-      tlPhone.reversed(!tlPhone.reversed())
-    })
-  });
-  
-  tlPhone.from(".header-callback", {opacity: 0,y: -150,duration: 0.35})
+  paused: true,
+  reversed: false
+});
+
+markerBorder.addEventListener('click', () => {
+  tlMarker.play()
+  markerBorder.addEventListener('click', (reversed) => {
+    tlMarker.reversed(!tlMarker.reversed())
+  })
+});
+
+tlMarker.from(".header-info", {
+  opacity: 0,
+  y: -150,
+  duration: 0.35
+})
 
 
+var tlPhone = gsap.timeline({
+  paused: true,
+  reversed: false
+});
 
+phoneBorder.addEventListener('click', () => {
+  tlPhone.play()
+  phoneBorder.addEventListener('click', (reversed) => {
+    tlPhone.reversed(!tlPhone.reversed())
+  })
+});
+
+tlPhone.from(".header-callback", {
+  opacity: 0,
+  y: -150,
+  duration: 0.35
+})

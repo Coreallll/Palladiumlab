@@ -1,14 +1,14 @@
 .examples-block {
 
-    &:hover {
-        &::after {
-            background-color: rgba(0, 0, 0, 0.6);
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        .examples-block-price {
-            opacity: 1;
-            transition: opacity 0.3s ease-in-out;   
-        }
+  &:hover {
+    &::after {
+      background-color: rgba(0, 0, 0, 0.6);
+      transition: background-color 0.3s ease-in-out;
     }
+
+    .examples-block-price {
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
 }

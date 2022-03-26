@@ -1,4 +1,4 @@
-const { src, dest, series, watch } = require('gulp');
+const {src, dest, series, watch} = require('gulp');
 const fileInclude = require('gulp-file-include');
 const sass = require('sass');
 const gulpSass = require('gulp-sass');
@@ -22,21 +22,21 @@ const browserSync = require('browser-sync');
 let isProd = false; // dev by default
 
 const clean = () => {
-    return del(['dist'])
+  return del(['dist'])
 }
 
 const resources = () => {
-    return src('src/resources/**')
-      .pipe(dest('dist/resources'))
+  return src('src/resources/**')
+    .pipe(dest('dist/resources'))
 }
 
 const images = () => {
   return src([
-    'src/img/**/*.jpg',
-    'src/img/**/*.png',
-    'src/img/*.svg',
-    'src/img/**/*.jpeg'
-  ])
+      'src/img/**/*.jpg',
+      'src/img/**/*.png',
+      'src/img/*.svg',
+      'src/img/**/*.jpeg'
+    ])
     .pipe(gulpif(isProd, image([
       image.mozjpeg({
         quality: 80,
@@ -66,7 +66,9 @@ const htmlInclude = () => {
 }
 
 const styles = () => {
-  return src('src/scss/**/*.scss', { sourcemaps: !isProd })
+  return src('src/scss/**/*.scss', {
+      sourcemaps: !isProd
+    })
     .pipe(plumber(
       notify.onError({
         title: "SCSS",
@@ -82,20 +84,22 @@ const styles = () => {
     .pipe(gulpif(isProd, cleanCSS({
       level: 2
     })))
-    .pipe(dest('dist/css', { sourcemaps: '.' }))
+    .pipe(dest('dist/css', {
+      sourcemaps: '.'
+    }))
     .pipe(browserSync.stream());
 };
 
 const scripts = () => {
   return src([
-    'src/js/**/*.js',
-    'src/js/main.js'
+      'src/js/**/*.js',
+      'src/js/main.js'
     ])
-  .pipe(babel({
-    presets:['@babel/env']
-  }))
-  .pipe(dest('dist/js'))
-  .pipe(browserSync.stream())
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
+    .pipe(dest('dist/js'))
+    .pipe(browserSync.stream())
 }
 
 const svgSprites = () => {
@@ -132,8 +136,8 @@ const svgSprites = () => {
 
 const watchFiles = () => {
   browserSync.init({
-    server:{
-      baseDir:'dist'
+    server: {
+      baseDir: 'dist'
     }
   })
 }

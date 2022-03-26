@@ -103,7 +103,7 @@
     font: $font-title-mini;
     color: $color-white;
   }
-  
+
   &__left {
     display: flex;
     flex-direction: column;
@@ -176,16 +176,40 @@
     &__button {
       padding-right: 15px;
     }
-    
+
   }
 
   .btn-streak--title {
     left: -38px;
     width: 25px;
   }
-  
-  .examples-block__title {
-    font-size: 18px;
+
+  .examples-block {
+    padding: 20px;
+
+    &__title {
+      font-family: 'Montserrat';
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+    }
   }
 
+  .examples-block-price {
+
+    &__left {
+      margin-right: 14px;
+    }
+
+    &__title {
+      margin-bottom: 5px;
+    }
+
+    &__value {
+      font-family: 'Montserrat';
+      font-size: 12px;
+      font-weight: 500;
+
+    }
+  }
 }

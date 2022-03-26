@@ -1,43 +1,43 @@
 .hero__callback-link--reverse {
 
-    &:hover {
-        border-color: $color-white;
-        transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
-    }
+  &:hover {
+    border-color: $color-white;
+    transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
 
-    &:active {
-        border-color: $color-active;
-        transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  &:active {
+    border-color: $color-active;
+    transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
-        .btn-streak--reverse {
-            background-color: $color-active;
-            transition: background-color 0.3s ease-in-out;
-        }
+    .btn-streak--reverse {
+      background-color: $color-active;
+      transition: background-color 0.3s ease-in-out;
     }
+  }
 }
 
 .hero__services-btn {
 
-    &:hover {
-        color: $color-hover;
-        transition: color 0.3s ease-in-out;
-    }
+  &:hover {
+    color: $color-hover;
+    transition: color 0.3s ease-in-out;
+  }
 
-    &:active {
-        color: $color-active-link;
-        transition: color 0.3s ease-in-out;
-    }
+  &:active {
+    color: $color-active-link;
+    transition: color 0.3s ease-in-out;
+  }
 }
 
 .hero__services-link {
 
-    &:hover {
-        color: $color-hover;
-        transition: color 0.3s ease-in-out;
-    }
+  &:hover {
+    color: $color-hover;
+    transition: color 0.3s ease-in-out;
+  }
 
-    &:active {
-        color: $color-active-link;
-        transition: color 0.3s ease-in-out;
-    }
+  &:active {
+    color: $color-active-link;
+    transition: color 0.3s ease-in-out;
+  }
 }

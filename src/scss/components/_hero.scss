@@ -2,6 +2,10 @@
   position: relative;
   margin-bottom: $section-margin;
 
+  &__container {
+    padding-top: 150px;
+  }
+
   &__title {
     font: $font-title-hero;
     color: $color-mine-shaft;
@@ -67,6 +71,7 @@
     height: 100%;
     min-height: 85px;
     max-width: 359px;
+    width: 25vw;
     border-right: 1px solid $color-services-border;
 
 
@@ -86,36 +91,38 @@
     .back-services-link.is-active {
       display: flex;
       -webkit-animation-name: backColUp;
-              animation-name: backColUp;
+      animation-name: backColUp;
       -webkit-animation-duration: 0.4s;
-              animation-duration: 0.4s;
+      animation-duration: 0.4s;
     }
-  
+
     .back-services-link.is-disabled {
-        display: flex;
-        -webkit-animation-name: dropdownClose;
-                animation-name: dropdownClose;
-        -webkit-animation-duration: 0.4s;
-                animation-duration: 0.4s;
+      display: flex;
+      -webkit-animation-name: dropdownClose;
+      animation-name: dropdownClose;
+      -webkit-animation-duration: 0.4s;
+      animation-duration: 0.4s;
     }
-  
+
     @keyframes dropdownOpen {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
+      from {
+        opacity: 0;
       }
-      
-      
-      @keyframes dropdownClose {
-        from {
-          opacity: 1;
-        }
-        to {
-          opacity: 0;
-        }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+
+    @keyframes dropdownClose {
+      from {
+        opacity: 1;
+      }
+
+      to {
+        opacity: 0;
+      }
     }
 
     .title-repair {
@@ -183,7 +190,7 @@
     }
 
 
-    .btn-arrow{
+    .btn-arrow {
 
       &--repair {
         display: block;
@@ -256,6 +263,7 @@
 
 .hero__services-link {
   margin-bottom: 8px;
+  text-align: center;
   font: $font-services;
   color: $color-white;
   transition: color 0.3s ease-in-out;
@@ -263,10 +271,6 @@
 
 .back-hero {
   z-index: -100;
-}
-
-.hero__container {
-  padding-top: 150px;
 }
 
 .hero-top {
@@ -318,6 +322,7 @@
   align-items: center;
   padding: 40px;
   max-width: 360px;
+  width: 25vw;
   height: 100%;
 }
 
@@ -333,9 +338,10 @@
 }
 
 @media (max-width:1024px) {
-  
+
   .hero {
     margin-bottom: $section-margin-1024;
+
     &__title {
       font-size: 58px;
     }
@@ -353,6 +359,10 @@
     }
   }
 
+  .hero__services-link {
+    font-size: 18px;
+  }
+
   .hero-top {
     margin-bottom: 44px;
   }
@@ -364,7 +374,7 @@
   .back-services-link {
     padding: 20px;
   }
-  
+
 }
 
 @media (max-width:768px) {
@@ -406,7 +416,16 @@
     &__services-description {
       margin-bottom: 10px;
       font-size: 10px;
+      line-height: 14px;
     }
+  }
+
+  .hero__services-link {
+    margin-bottom: 5px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    line-height: 20px;
+    font-size: 14px;
   }
 
   .hero-bottom {

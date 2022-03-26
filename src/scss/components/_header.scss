@@ -1,272 +1,276 @@
 .header {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 100;
-    border-bottom: 1px solid $color-header-border;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  border-bottom: 1px solid $color-header-border;
+
+  &--reverse {
+    border-color: $color-services-border;
+  }
+
+  &__container {
+    padding: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__marker {
+    display: flex;
+    align-items: center;
+    padding: 34px;
+    height: 100%;
+    border-right: 1px solid $color-header-border;
 
     &--reverse {
-        border-color: $color-services-border;
+      border-color: $color-services-border;
     }
+  }
 
-    &__container {
-        padding: 0;
-        position: relative;
-        display: flex;
-        align-items: center;
+  &__logo {
+    margin: 0 auto;
+    cursor: pointer;
+    transition: fill 0.2s ease-in-out;
+
+    .logo {
+      fill: $color-mine-shaft;
+
+      &--reverse {
+        fill: $color-white;
+      }
     }
+  }
 
-    &__marker {
-        display: flex;
-        align-items: center;
-        padding: 34px;
-        height: 100%;
-        border-right: 1px solid $color-header-border;
+  &__phone {
+    display: flex;
+    align-items: center;
+    padding: 33px;
+    height: 100%;
+    border-left: 1px solid $color-header-border;
 
-        &--reverse {
-            border-color: $color-services-border;
-        }
+    &--reverse {
+      border-color: $color-services-border;
     }
+  }
 
-    &__logo {
-        margin: 0 auto;
-        cursor:pointer;
-        transition: fill 0.2s ease-in-out;
-        
-        .logo {
-            fill: $color-mine-shaft;
-    
-            &--reverse {
-                fill: $color-white;
-            }
-        }
-    }
-
-    &__phone {
-        display: flex;
-        align-items: center;
-        padding: 33px;
-        height: 100%;
-        border-left: 1px solid $color-header-border;
-
-        &--reverse {
-            border-color: $color-services-border;
-        }
-    }
-    
 }
 
 .nav {
 
-    &--left {
-        padding-left: 132px;
+  &--left {
+    padding-left: 132px;
+  }
+
+  &--right {
+    padding-right: 132px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__link {
+    position: relative;
+    font: $font-title-mini;
+    color: $color-mine-shaft;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+
+    &--reverse {
+      color: $color-white;
     }
 
-    &--right {
-        padding-right: 132px;
-    }
-
-    &__list {
-        display: flex;
-    }
-
-    &__item:not(:last-child) {
-        margin-right: 50px;
-    }
-
-    &__link {
-        position: relative;
-        font: $font-title-mini;
-        color: $color-mine-shaft;
-        opacity: 0.7;
-        transition: opacity 0.3s ease-in-out;
-
-        &--reverse {
-            color: $color-white;
-        }
-
-    }
+  }
 }
 
 .marker-icon {
-    fill: $color-mine-shaft;
-    transition: fill 0.3s ease-in-out;
+  fill: $color-mine-shaft;
+  transition: fill 0.3s ease-in-out;
 
-    &--reverse {
-        fill: $color-white;
-    }
+  &--reverse {
+    fill: $color-white;
+  }
 
 }
 
 .phone-icon {
-    fill: $color-mine-shaft;
+  fill: $color-mine-shaft;
 
-    &--reverse {
-        fill: $color-white;
-    }
+  &--reverse {
+    fill: $color-white;
+  }
 }
 
 .header-info {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    right: 10%;
-    left: 10%;
-    padding: 20px 0;
-    background-color: $color-white;
-    z-index: 100;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  right: 10%;
+  left: 10%;
+  padding: 20px 0;
+  background-color: $color-white;
+  z-index: 100;
 
-    &__adress {
-        font: $font-title-mini;
-        color: $color-mine-shaft;
+  &__adress {
+    font: $font-title-mini;
+    color: $color-mine-shaft;
 
-        &--bold {
-            color: $color-hover;
-        }
+    &--bold {
+      color: $color-hover;
     }
+  }
 
-    &__left {
-        padding-right: 20px;
-        border-right: 1px solid $color-header-border;
-    }
+  &__left {
+    padding-right: 20px;
+    border-right: 1px solid $color-header-border;
+  }
 
-    &__right {
-        padding-left: 20px;
-    }
+  &__right {
+    padding-left: 20px;
+  }
 }
 
 .header-callback {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: 10%;
-    left: 10%;
-    padding: 20px 0;
-    background-color: $color-white;
-    z-index: 100;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 10%;
+  left: 10%;
+  padding: 20px 0;
+  background-color: $color-white;
+  z-index: 100;
 
-    &__number {
-        margin-right: 20px;
-        font-family: 'Gilroy';
-        font-size: 30px;
-        line-height: 36px;
-        color: $color-mine-shaft;
-    }
+  &__number {
+    margin-right: 20px;
+    font-family: 'Gilroy';
+    font-size: 30px;
+    line-height: 36px;
+    color: $color-mine-shaft;
+  }
 
 }
 
 @media (max-width:1024px) {
 
-    .header {
+  .header {
 
-        &__marker {
-            padding: 25px;
-        }
-
-        &__phone {
-            padding: 25px;
-        }
+    &__marker {
+      padding: 25px;
     }
 
-    .nav {
-        &--left {
-            padding-left:50px;
-        }
+    &__phone {
+      padding: 25px;
+    }
+  }
 
-        &--right {
-            padding-right: 50px;
-        }
-
-        &__item {
-            &:not(:last-child) {
-                margin-right: 40px;
-            }
-        }
-
-        &__link {
-            font-size: 12px;
-        }
+  .nav {
+    &--left {
+      padding-left: 50px;
     }
 
-    .logo {
-        width: 25px;
-        height: 26px;
+    &--right {
+      padding-right: 50px;
     }
 
-    .header-info {
-
-        padding: 13px 0;
-        
-        &__left {
-            display: flex;
-            flex-direction: column;
-        }
-
-        &__right {
-            display: flex;
-            flex-direction: column;
-        }
+    &__item {
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
     }
 
-    .header-callback {
-        padding: 0;
-
-        &__number {
-            font-size: 24px;
-        }
+    &__link {
+      font-size: 12px;
     }
+  }
+
+  .logo {
+    width: 25px;
+    height: 26px;
+  }
+
+  .header-info {
+
+    padding: 5px 0;
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__right {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .header-callback {
+    padding: 10px;
+
+    &__number {
+      font-size: 24px;
+    }
+  }
+
+  .btn-recall {
+    padding: 7px 30px;
+  }
 }
 
 @media (max-width:768px) {
 
-    .header {
+  .header {
 
-        &__marker {
-            padding: 24px;
-        }
-
-        &__phone {
-            padding: 24px;
-        }
+    &__marker {
+      padding: 24px;
     }
 
-    .nav {
-        display: none;
-    }
-
-    .marker-icon {
-        width: 10px;
-        height: 13px;
-    }
-
-    .phone-icon {
-        width: 14px;
-        height: 13px;
-    }
-
-    .header-info {
-        padding: 0;
-        right: 15%;
-        left: 15%;
-
-        &__adress {
-            font-family: 'Montserrat';
-            font-size: 10px;
-        }
-    }
-
-    .header-callback {
-        right: 15%;
-        left: 15%;
-        
-        &__number {
-            font-size: 16px;
-        }
-    }
-
-    .btn-recall {
-        padding: 7px 30px;
+    &__phone {
+      padding: 24px;
     }
   }
+
+  .nav {
+    display: none;
+  }
+
+  .marker-icon {
+    width: 10px;
+    height: 13px;
+  }
+
+  .phone-icon {
+    width: 14px;
+    height: 13px;
+  }
+
+  .header-info {
+    padding: 0;
+    right: 15%;
+    left: 15%;
+
+    &__adress {
+      font-family: 'Montserrat';
+      font-size: 8px;
+    }
+  }
+
+  .header-callback {
+    right: 15%;
+    left: 15%;
+
+    &__number {
+      font-size: 16px;
+    }
+  }
+
+  .btn-recall {
+    padding: 7px 30px;
+  }
+}
