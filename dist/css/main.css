@@ -274,7 +274,7 @@ p {
   color: #FFFFFF;
 }
 
-.btn-file:hover .btn-file--icon {
+.btn-file:hover .btn-file-icon {
   fill: #C6876D;
 }
 
@@ -1371,7 +1371,7 @@ p {
   color: #222222;
 }
 
-.form-questions__label {
+.form-questions__block {
   position: relative;
   display: block;
   margin-bottom: 25px;
@@ -1502,7 +1502,7 @@ p {
   .form-questions__title {
     font-size: 8px;
   }
-  .form-questions__label {
+  .form-questions__block {
     margin-bottom: 15px;
   }
 

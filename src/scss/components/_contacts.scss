@@ -90,7 +90,7 @@
 
 .form-questions {
 
-  &__label {
+  &__block {
     position: relative;
     display: block;
     margin-bottom: 25px;
@@ -223,7 +223,7 @@
       font-size: 8px;
     }
 
-    &__label {
+    &__block {
       margin-bottom: 15px;
     }
   }
