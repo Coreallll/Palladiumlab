@@ -221,6 +221,7 @@
   &__services-btn {
     font: $font-services;
     color: $color-white;
+    transition: color 0.3s ease-in-out;
   }
 
   &__services-description {
@@ -257,6 +258,7 @@
   margin-bottom: 8px;
   font: $font-services;
   color: $color-white;
+  transition: color 0.3s ease-in-out;
 }
 
 .back-hero {

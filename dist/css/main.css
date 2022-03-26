@@ -827,6 +827,9 @@ p {
 .hero__services-btn {
   font: 800 20px/24px "Gilroy", sans-serif;
   color: #FFFFFF;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 .hero__services-description {
   display: none;
@@ -856,6 +859,9 @@ p {
   margin-bottom: 8px;
   font: 800 20px/24px "Gilroy", sans-serif;
   color: #FFFFFF;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .back-hero {
@@ -1619,6 +1625,20 @@ p {
   -webkit-transition: background-color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
+}
+
+.hero__services-btn:hover {
+  color: #C6876D;
+}
+.hero__services-btn:active {
+  color: #6D5247;
+}
+
+.hero__services-link:hover {
+  color: #C6876D;
+}
+.hero__services-link:active {
+  color: #6D5247;
 }
 
 .examples-block:hover::after {

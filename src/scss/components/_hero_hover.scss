@@ -15,3 +15,25 @@
         }
     }
 }
+
+.hero__services-btn {
+
+    &:hover {
+        color: $color-hover;
+    }
+
+    &:active {
+        color: $color-active-link;
+    }
+}
+
+.hero__services-link {
+    
+    &:hover {
+        color: $color-hover;
+    }
+
+    &:active {
+        color: $color-active-link;
+    }
+}
