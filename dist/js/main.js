@@ -48,6 +48,7 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 var btnServ = document.querySelector('.hero__services-btn');
 var backBot = document.querySelector('.hero-bottom');
+var titleMain = document.querySelector('.hero__title--main');
 var subtitle = document.querySelector('.hero__subtitle');
 var callLink = document.querySelector('.hero__callback-link');
 var btnStreak = document.querySelector('.btn-streak-hero');
@@ -73,6 +74,7 @@ var title3 = document.querySelector('.title-design');
 var title4 = document.querySelector('.title-room');
 btnServ.addEventListener('click', function () {
   backBot.classList.add('hero-bottom--disable');
+  titleMain.classList.add('hero__title--main-disable');
   subtitle.classList.add('hero__subtitle--reverse');
   callLink.classList.add('hero__callback-link--reverse');
   btnStreak.classList.add('btn-streak--reverse');

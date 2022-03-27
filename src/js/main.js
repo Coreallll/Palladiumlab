@@ -48,6 +48,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 const btnServ = document.querySelector('.hero__services-btn')
 const backBot = document.querySelector('.hero-bottom')
+const titleMain = document.querySelector('.hero__title--main')
 const subtitle = document.querySelector('.hero__subtitle')
 const callLink = document.querySelector('.hero__callback-link')
 const btnStreak = document.querySelector('.btn-streak-hero')
@@ -75,6 +76,7 @@ const title4 = document.querySelector('.title-room')
 
 btnServ.addEventListener('click', function () {
   backBot.classList.add('hero-bottom--disable')
+  titleMain.classList.add('hero__title--main-disable')
   subtitle.classList.add('hero__subtitle--reverse')
   callLink.classList.add('hero__callback-link--reverse')
   btnStreak.classList.add('btn-streak--reverse')

@@ -11,6 +11,10 @@
     color: $color-mine-shaft;
     z-index: -100;
 
+    &--main-disable {
+      opacity: 0;
+    }
+
     &--services {
       position: absolute;
       display: flex;
@@ -436,6 +440,10 @@
     &__title {
       font-size: 42px;
       line-height: 44px;
+
+      &--main {
+        margin-bottom: 10px;
+      }
 
       &--services {
         top: 145px;
