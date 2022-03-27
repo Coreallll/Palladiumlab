@@ -15,6 +15,7 @@
       position: absolute;
       display: flex;
       justify-content: center;
+      text-align: center;
       top: 150px;
       right: 0;
       left: 0;
@@ -298,21 +299,6 @@
   }
 }
 
-.btn-streak {
-  position: absolute;
-  top: 18px;
-  left: -12px;
-  width: 24px;
-  height: 1px;
-  background-color: $color-mine-shaft;
-  transition: background-color 0.3s ease-in-out;
-
-  &--reverse {
-    background-color: $color-white;
-    transition: background-color 0.3s ease-in-out;
-  }
-}
-
 .back-services-link {
   position: absolute;
   bottom: 85px;
@@ -403,10 +389,10 @@
 
     &__services-item {
       padding: 20px;
+      min-height: 75px;
     }
 
     &__services-btn {
-      margin-bottom: 5px;
       font-family: 'Montserrat';
       font-weight: 600;
       line-height: 20px;
@@ -418,27 +404,80 @@
       font-size: 10px;
       line-height: 14px;
     }
-  }
 
-  .hero__services-link {
-    margin-bottom: 5px;
-    font-family: 'Montserrat';
-    font-weight: 600;
-    line-height: 20px;
-    font-size: 14px;
+    &__services-link {
+      margin-bottom: 5px;
+      font-family: 'Montserrat';
+      font-weight: 600;
+      line-height: 20px;
+      font-size: 14px;
+    }
   }
 
   .hero-bottom {
-    padding-top: 50px;
-  }
-
-  .btn-arrow {
-    width: 30px;
-    height: 30px;
+    padding-top: 60px;
   }
 
   .back-services-link {
     bottom: 75px;
     padding: 10px;
+  }
+}
+
+@media (max-width:500px) {
+  
+  .hero {
+    margin-bottom: $section-margin-500;
+
+    &__container {
+      padding-top: 195px;
+    }
+
+    &__title {
+      font-size: 42px;
+      line-height: 44px;
+
+      &--services {
+        top: 145px;
+      }
+    }
+
+    &__subtitle {
+      font-size: 42px;
+      line-height: 44px;
+    }
+
+    &__services-list {
+      margin-bottom: 14px;
+    }
+
+    &__services-item {
+      padding: 0 9px;
+    }
+
+    &__services-btn {
+      margin-bottom: 0;
+      font-size: 10px;
+      line-height: 16px;
+    }
+
+    &__services-link {
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    &__services-description {
+      font-size: 8px;
+      line-height: 12px;
+    }
+  }
+
+  .hero-bottom {
+    padding-bottom: 14px;
+  }
+
+  .back-services-link {
+    bottom: 53px;
+    padding: 5px;
   }
 }

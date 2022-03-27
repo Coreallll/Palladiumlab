@@ -78,7 +78,7 @@ p {
 
 .btn {
   position: relative;
-  padding: 9px 47px;
+  padding: 9px 48px;
   font: $font-title-mini;
   border: 1px solid $color-border-btn;
   color: $color-mine-shaft;
@@ -93,6 +93,21 @@ p {
     border-color: $color-active;
     color: $color-active;
     transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+}
+
+.btn-streak {
+  position: absolute;
+  top: 18px;
+  left: -12px;
+  width: 24px;
+  height: 1px;
+  background-color: $color-mine-shaft;
+  transition: background-color 0.3s ease-in-out;
+
+  &--reverse {
+    background-color: $color-white;
+    transition: background-color 0.3s ease-in-out;
   }
 }
 
@@ -257,11 +272,18 @@ p {
   }
 
   .btn {
+    padding: 7px 30px;
     font-size: 12px;
   }
+
+  .btn-streak {
+    top: 16px;
+  }
+  
 }
 
 @media (max-width:768px) {
+
   .container {
     margin: 0 auto;
     padding: 0 50px;
@@ -281,12 +303,55 @@ p {
 
   .btn-arrow {
     padding-left: 3px;
+    width: 30px;
+    height: 30px;
 
     &::before,
     &::after {
       width: 30px;
       height: 30px;
     }
+  }  
+}
+
+@media (max-width:500px) {
+
+  .container {
+    margin: 0 auto;
+    padding: 0 25px;
+    max-width: 500px;
   }
 
+  .grid {
+    grid-template-rows: repeat(5, 170px);
+  }
+  
+  .btn {
+    padding: 5px 20px;
+  }
+
+  .btn-streak {
+    top: 14px;
+  }
+
+  .btn-arrow {
+    width: 25px;
+    height: 25px;
+
+    &::before,
+    &::after {
+      width: 25px;
+      height: 25px;
+    }
+
+    .arrow-icon {
+      width: 6px;
+      height: 13px;
+    }
+  }
+
+  .btn-file-icon {
+    width: 14px;
+    height: 14px;
+  }
 }

@@ -217,10 +217,6 @@
       font-size: 24px;
     }
   }
-
-  .btn-recall {
-    padding: 7px 30px;
-  }
 }
 
 @media (max-width:768px) {
@@ -270,7 +266,46 @@
     }
   }
 
-  .btn-recall {
-    padding: 7px 30px;
+}
+
+@media (max-width:500px) {
+
+  .header-info {
+    right: 20%;
+    left: 20%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 84px;
+    padding-bottom: 20px;
+    background-color: #ffffff;
+
+    &__left {
+      margin-bottom: 10px;
+      padding-right: 0;
+      padding-bottom: 10px;
+      border-right: none;
+      border-bottom: 1px solid $color-header-border;
+    }
+
+    &__right {
+      padding-left: 0;
+    }
   }
+
+  .header-callback {
+    padding-top: 78px;
+    padding-bottom: 15px;
+    right: 20%;
+    left: 20%;
+    flex-direction: column;
+
+    &__number {
+      margin-right: 0;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $color-header-border;
+    }
+  }
+  
 }
